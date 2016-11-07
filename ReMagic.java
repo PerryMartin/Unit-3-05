@@ -11,22 +11,21 @@ public class Magica {
 	
 	public static void magicRecursive(int[] box,int start){
 
-		//Checks if the square is magical
+		
 		if(checkMagic(box))
 		{
 			printArray(box);
 			System.out.println();
 		}
 		else{
-			//loops through all the elements of an array that will
-			//switch with a certain spot
+			
 			for(int counter = start; counter < 9; counter ++)
 			{
-					//swap elements
+					
 					box = swapArray(box,start,counter);
-					//do it again with a different starting spot
+					
 					magicRecursive(box,start+1);
-					//swap back
+					
 					box = swapArray(box,start,counter);
 				
 			}
@@ -62,7 +61,7 @@ public class Magica {
 	
 	
 	public static int[] swapArray(int[] array,int start,int end){
-		//swaps elements of an array
+		
  		int temp = array[end];
 		array[end] = array[start];
 		array[start] = temp;
@@ -72,7 +71,7 @@ public class Magica {
 	}
 	
 	public static void printArray(int[] box){
-		//prints array
+		
 		System.out.println(box[0]+" "+box[1]+" "+box[2]);
 		System.out.println(box[3]+" "+box[4]+" "+box[5]);
 		System.out.println(box[6]+" "+box[7]+" "+box[8]);
@@ -81,3 +80,4 @@ public class Magica {
 	}
 
 }
+
